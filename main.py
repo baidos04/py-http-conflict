@@ -58,6 +58,7 @@ class OurHandler(BaseHTTPRequestHandler):
     def dummy_page(self):
         self._headers()
         self.wfile.write(b"Dummy page for debag")
+        self.echo_page()
 
     def do_GET(self):
         """ Обработка GET запросов к серверу """
